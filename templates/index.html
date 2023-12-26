@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Welcome to Computer Vision - Index
+{% endblock %}
+
+
+{% block content %}
+<br/> <br/>
+<div>
+    <form method="POST" action="{{ url_for('index') }}" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div>{{ form.product_name.label }}</div>
+        <div>
+            {{ form.product_name(size=32) }}
+        </div>
+        <br/>
+        <div>{{ form.product_id.label }}</div>
+        <div>
+            {{ form.product_id() }}
+        </div>
+    <br/>
+     <div>{{ form.product_video.label }}</div>
+    <div>
+            {{ form.product_video() }}
+        </div>
+    <br/>
+        <div>
+            {{ form.submit() }}
+        </div>
+</form>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Welcome to Computer Vision - Index
+{% endblock %}
+
+
+{% block content %}
+<br/> <br/>
+<div>
+    <form method="POST" action="{{ url_for('capture_image') }}" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div>{{ form.image.label }}</div>
+        <div>
+            {{ form.image() }}
+        </div>
+        <br/>
+        <div>
+            {{ form.submit() }}
+        </div>
+</form>
+
+</div>
+
+{% endblock content %}

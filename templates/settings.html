@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Settings
+{% endblock %}
+
+{% block content %}
+<br/> <br/>
+<div class="row">
+
+            <div class="col-md-2 col-sm-2 col-xs-2">
+                <label for="toggle_input5">Push to AWS S3</label><br><br>
+                <label for="toggle_input">Labelling</label><br><br>
+                <label for="toggle_input1">Training</label><br><br>
+                <label for="toggle_input2">Conversion</label><br><br>
+                <label for="toggle_input3">Detection</label><br><br>
+                <label for="toggle_input4">Prediction</label><br><br>
+
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox" id="toggle_input5" name="toggle_input5" {% if toggle_value =='on' %}checked{% endif %} />
+                    <span class="toggle-label" data-off="OFF" data-on="ON"></span>
+                    <span class="toggle-handle"></span>
+                </label><br>
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox" id="toggle_input" name="toggle_input" {% if toggle_value =='on' %}checked{% endif %} />
+                    <span class="toggle-label" data-off="OFF" data-on="ON"></span>
+                    <span class="toggle-handle"></span>
+                </label><br>
+
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox" id="toggle_input1" name="toggle_input1" {% if toggle1_value =='on' %}checked{% endif %} />
+                    <span class="toggle-label" data-off="OFF" data-on="ON"></span>
+                    <span class="toggle-handle"></span>
+                </label><br>
+
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox"  id="toggle_input2" name="toggle_input2" {% if toggle2_value =='on' %}checked{% endif %} />
+                    <span class="toggle-label" data-off="OFF" data-on="ON"></span>
+                    <span class="toggle-handle"></span>
+                </label><br>
+
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox" id="toggle_input3" name="toggle_input3"/>
+                    <span class="toggle-label" data-off="OFF" data-on="ON"></span>
+                    <span class="toggle-handle"></span>
+                </label><br>
+
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox" id="toggle_input4" name="toggle_input4"/>
+                    <span class="toggle-label" data-off="OFF" data-on="ON"></span>
+                    <span class="toggle-handle"></span>
+                </label><br>
+            </div>
+<!--            <div class="save_button">-->
+<!--                <button class="btn btn-success">Save API Settings</button>-->
+<!--            </div>-->
+
+        </div>
+
+
+{% endblock content%}
